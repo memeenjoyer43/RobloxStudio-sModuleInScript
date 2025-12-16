@@ -32,7 +32,7 @@ local adDictionary = {
 		"proud", "confident", "motivated", "energetic", "excited",
 		"bored", "tired", "sleepy", "lazy", "quiet",
 		"shy", "reserved", "careful", "patient", "neutral"
-	}
+	},
 
 	verbCommand = {
 		"want", "like", "enjoy", "prefer", "hope for",
