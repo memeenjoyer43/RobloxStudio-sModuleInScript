@@ -16,12 +16,60 @@ local adDictionary = {
 	phraseDemand = "You #verbCommand# #noun.s# in your #emotionAdjective# life #timeCommand#!",
 
 	-- General purpose words for any phrase. Used between all phrases. 
-	productAdjective = {"hot", "brand-new", "redesigned", "upgraded", "chic", "modern", "colorful", "hipster", "new-fangled"},
-	emotionAdjective = {"sad", "miserable", "sorrow-filled", "empty"},
-	verbCommand = {"need", "miss", "lack" },
-	verb = {"taste", "fear", "adore", "eat", "buy", "consume", "steal"},
-	noun = {"pineapple", "body lotion", "teddy bear", "pizza", "duck", "paper"},
-	timeCommand = {"right now", " today", "this instant", "forever", "now"}
+	productAdjective = {
+		"smooth", "simple", "clean", "soft", "lightweight", "bright",
+		"polished", "fresh", "neat", "balanced", "cozy", "cool",
+		"calm", "warm", "friendly", "flexible", "playful", "fun",
+		"handy", "useful", "practical", "smart-looking", "well-made",
+		"everyday", "casual", "classic", "tidy", "compact",
+		"adjustable", "reliable", "quiet", "gentle", "nice"
+	},
+
+	emotionAdjective = {
+		"calm", "relaxed", "content", "peaceful", "comfortable",
+		"curious", "interested", "focused", "thoughtful", "hopeful",
+		"friendly", "kind", "cheerful", "lighthearted", "playful",
+		"proud", "confident", "motivated", "energetic", "excited",
+		"bored", "tired", "sleepy", "lazy", "quiet",
+		"shy", "reserved", "careful", "patient", "neutral"
+	}
+
+	verbCommand = {
+		"want", "like", "enjoy", "prefer", "hope for",
+		"plan to get", "look for", "try to find", "aim for",
+		"decide on", "think about", "choose", "pick",
+		"prepare for", "wait for", "go for", "ask about",
+		"check out", "consider", "save for"
+	},
+
+	verb = {
+		"use", "hold", "carry", "open", "close",
+		"move", "place", "set", "arrange", "organize",
+		"look at", "watch", "listen to", "read",
+		"write", "draw", "build", "make", "create",
+		"play with", "share", "give", "receive",
+		"keep", "store", "clean", "fix", "adjust",
+		"test", "try", "explore", "enjoy"
+	},
+
+	noun = {
+		"apple", "banana", "sandwich", "cookie", "cup",
+		"bottle", "box", "bag", "hat", "shirt",
+		"shoes", "socks", "jacket", "blanket", "pillow",
+		"chair", "table", "shelf", "drawer", "door",
+		"window", "book", "page", "notebook", "folder",
+		"pen", "marker", "crayon", "paper sheet", "card",
+		"toy", "ball", "block", "puzzle", "game",
+		"plant", "leaf", "flower", "rock", "shell"
+	},
+
+	timeCommand = {
+		"soon", "later on", "right away", "in a bit", "this moment",
+		"today", "tomorrow", "this week", "next time", "sometime",
+		"in the morning", "in the afternoon", "in the evening",
+		"after a while", "before long", "at the start",
+		"by the end", "during the day", "all the time", "often"
+	}
 }
 
 -- GRAMMAR. Created to specifically create information for an advertisement. 
