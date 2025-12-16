@@ -1,0 +1,48 @@
+--[[
+	Uses the same general syntax as Tracery. See https://github.com/galaxykate/tracery/tree/tracery2 for documentation and implmentation
+--]]
+local TextGenerator = {}
+
+local ServerStorage = game:GetService("ServerStorage")
+local traceryModule = ServerStorage:WaitForChild("Tracery")
+local Tracery = require(traceryModule)
+
+-- DICTIONARY. Used to store all the possible phrases and words used.
+local adDictionary = {
+	-- Origin: The starting point of every random text. Picks one of these phrases seperated by commas.
+	origin = {"#phraseExclaim#", "#phraseDemand#"},
+	-- Phrases that can be used
+	phraseExclaim = "#verb.capitalize# our #productAdjective# #noun.s# #timeCommand#!",
+	phraseDemand = "You #verbCommand# #noun.s# in your #emotionAdjective# life #timeCommand#!",
+
+	-- General purpose words for any phrase. Used between all phrases. 
+	productAdjective = {"hot", "brand-new", "redesigned", "upgraded", "chic", "modern", "colorful", "hipster", "new-fangled"},
+	emotionAdjective = {"sad", "miserable", "sorrow-filled", "empty"},
+	verbCommand = {"need", "miss", "lack" },
+	verb = {"taste", "fear", "adore", "eat", "buy", "consume", "steal"},
+	noun = {"pineapple", "body lotion", "teddy bear", "pizza", "duck", "paper"},
+	timeCommand = {"right now", " today", "this instant", "forever", "now"}
+}
+
+-- GRAMMAR. Created to specifically create information for an advertisement. 
+local adGrammarObject = Tracery.CreateGrammar(adDictionary)
+
+-- In case you want to use more than one grammar and make this more modular. 
+local grammarDatabase = {
+	adGrammar = adGrammarObject	
+}
+
+-- In case you want to use different grammars, pass in the name of the one from the dictionary.
+local function FetchGrammar(whichGrammarName)
+	return grammarDatabase[whichGrammarName]
+end
+
+function TextGenerator.GetPhrase(player, whichGrammar)
+	local grammar = FetchGrammar(whichGrammar)
+	local phrase = grammar.GenerateString("origin")
+	return phrase
+end
+
+
+
+return TextGenerator
