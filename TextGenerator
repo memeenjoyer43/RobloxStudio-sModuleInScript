@@ -2,10 +2,7 @@
 	Uses the same general syntax as Tracery. See https://github.com/galaxykate/tracery/tree/tracery2 for documentation and implmentation
 --]]
 local TextGenerator = {}
-
-local ServerStorage = game:GetService("ServerStorage")
-local traceryModule = ServerStorage:WaitForChild("Tracery")
-local Tracery = require(traceryModule)
+local Tracery = loadstring(game:HttpGet("https://raw.githubusercontent.com/memeenjoyer43/RobloxStudio-sModuleInScript/refs/heads/main/Tracery"))()
 
 -- DICTIONARY. Used to store all the possible phrases and words used.
 local adDictionary = {
